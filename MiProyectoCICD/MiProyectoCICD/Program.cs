@@ -24,6 +24,7 @@ namespace MiProyectoCICD
                 Console.WriteLine("2. Listar estudiantes");
                 Console.WriteLine("3. Calcular promedio general");
                 Console.WriteLine("4. Salir");
+                Console.WriteLine("5. Buscar estudiante por nombre");
                 Console.Write("Seleccione una opción: ");
                 opcion = int.Parse(Console.ReadLine());
 
@@ -40,6 +41,9 @@ namespace MiProyectoCICD
                         break;
                     case 4:
                         Console.WriteLine("¡Hasta pronto!");
+                        break;
+                    case 5:
+                        BuscarEstudiante();
                         break;
                     default:
                         Console.WriteLine("Opción inválida.");
@@ -103,6 +107,22 @@ namespace MiProyectoCICD
 
             double promedio = suma / estudiantes.Count;
             Console.WriteLine($"Promedio general: {promedio:F2}");
+        }
+        static void BuscarEstudiante()
+        {
+            Console.Write("Ingrese el nombre del estudiante a buscar: ");
+            string nombre = Console.ReadLine();
+
+            var encontrado = estudiantes.Find(e => e.Nombre.Equals(nombre, StringComparison.OrdinalIgnoreCase));
+
+            if (encontrado != null)
+            {
+                Console.WriteLine($"Estudiante encontrado: {encontrado.Nombre} - Nota: {encontrado.Nota}");
+            }
+            else
+            {
+                Console.WriteLine("Estudiante no encontrado.");
+            }
         }
     }
 }
