@@ -1,26 +1,32 @@
 name: CI/CD para C# .NET
- 
+
 on:
   push:
     branches: [ main ]
   pull_request:
     branches: [ main ]
- 
+
 jobs:
   build:
     runs-on: windows-latest
- 
+
     steps:
     - name: Clonar el código
       uses: actions/checkout@v3
- 
+
+    - name: Ver contenido del repositorio
+      run: ls -R
+
     - name: Configurar .NET
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: '8.0.x'
- 
+
     - name: Restaurar dependencias
       run: dotnet restore MiProyectoCICD/MiProyectoCICD.csproj
- 
+
     - name: Compilar el proyecto
       run: dotnet build MiProyectoCICD/MiProyectoCICD.csproj --configuration Release
+
+    - name: Ejecutar pruebas (opcional)
+      run: dotnet test MiProyectoCICD/MiProyectoCICD.csproj --configuration Release
