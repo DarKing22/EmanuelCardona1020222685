@@ -1,0 +1,24 @@
+# Visual Studio
+.vscode/
+.vs/
+*.user
+*.suo
+
+# Compilación
+bin/
+obj/
+
+# NuGet
+*.nupkg
+*.snupkg
+*.nuspec
+packages/
+
+# Local
+*.log
+*.tmp
+TestResults/
+
+# Sistema
+*.DS_Store
+Thumbs.db

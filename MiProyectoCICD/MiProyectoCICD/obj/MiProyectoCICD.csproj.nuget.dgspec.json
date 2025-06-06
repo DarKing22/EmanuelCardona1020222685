@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\ProgramacionD\\MiProyectoCICD\\MiProyectoCICD\\MiProyectoCICD.csproj": {}
+    "C:\\ProgramacionD\\EmanuelCardona1020222685\\MiProyectoCICD\\MiProyectoCICD\\MiProyectoCICD.csproj": {}
   },
   "projects": {
-    "C:\\ProgramacionD\\MiProyectoCICD\\MiProyectoCICD\\MiProyectoCICD.csproj": {
+    "C:\\ProgramacionD\\EmanuelCardona1020222685\\MiProyectoCICD\\MiProyectoCICD\\MiProyectoCICD.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\ProgramacionD\\MiProyectoCICD\\MiProyectoCICD\\MiProyectoCICD.csproj",
+        "projectUniqueName": "C:\\ProgramacionD\\EmanuelCardona1020222685\\MiProyectoCICD\\MiProyectoCICD\\MiProyectoCICD.csproj",
         "projectName": "MiProyectoCICD",
-        "projectPath": "C:\\ProgramacionD\\MiProyectoCICD\\MiProyectoCICD\\MiProyectoCICD.csproj",
+        "projectPath": "C:\\ProgramacionD\\EmanuelCardona1020222685\\MiProyectoCICD\\MiProyectoCICD\\MiProyectoCICD.csproj",
         "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "C:\\ProgramacionD\\MiProyectoCICD\\MiProyectoCICD\\obj\\",
+        "outputPath": "C:\\ProgramacionD\\EmanuelCardona1020222685\\MiProyectoCICD\\MiProyectoCICD\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
