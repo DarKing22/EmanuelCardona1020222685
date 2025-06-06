@@ -25,6 +25,7 @@ namespace MiProyectoCICD
                 Console.WriteLine("3. Calcular promedio general");
                 Console.WriteLine("4. Salir");
                 Console.WriteLine("5. Buscar estudiante por nombre");
+                Console.WriteLine("6. Eliminar estudiante por nombre");
                 Console.Write("Seleccione una opción: ");
                 opcion = int.Parse(Console.ReadLine());
 
@@ -44,6 +45,9 @@ namespace MiProyectoCICD
                         break;
                     case 5:
                         BuscarEstudiante();
+                        break;
+                    case 6:
+                        EliminarEstudiante();
                         break;
                     default:
                         Console.WriteLine("Opción inválida.");
@@ -118,6 +122,23 @@ namespace MiProyectoCICD
             if (encontrado != null)
             {
                 Console.WriteLine($"Estudiante encontrado: {encontrado.Nombre} - Nota: {encontrado.Nota}");
+            }
+            else
+            {
+                Console.WriteLine("Estudiante no encontrado.");
+            }
+        }
+        static void EliminarEstudiante()
+        {
+            Console.Write("Ingrese el nombre del estudiante a eliminar: ");
+            string nombre = Console.ReadLine();
+
+            var encontrado = estudiantes.Find(e => e.Nombre.Equals(nombre, StringComparison.OrdinalIgnoreCase));
+
+            if (encontrado != null)
+            {
+                estudiantes.Remove(encontrado);
+                Console.WriteLine($"Estudiante '{encontrado.Nombre}' eliminado correctamente.");
             }
             else
             {
