@@ -20,7 +20,7 @@ jobs:
         dotnet-version: '8.0.x'
  
     - name: Restaurar dependencias
-      run: dotnet restore
+      run: dotnet restore MiProyectoCICD/MiProyectoCICD.csproj
  
-    - name: Compilar la solución
-      run: dotnet build --configuration Release
+    - name: Compilar el proyecto
+      run: dotnet build MiProyectoCICD/MiProyectoCICD.csproj --configuration Release
